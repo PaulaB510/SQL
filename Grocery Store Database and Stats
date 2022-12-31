@@ -1,0 +1,24 @@
+--Create a grocery store database
+
+/** Inventory list:
+Soap (4)
+Cats (5)
+Cups (12)
+Shoes (9)
+Computers (4)
+Heaters (4)
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER );
+
+INSERT INTO inventory VALUES (1, "Soap", 4, 1 );
+INSERT INTO inventory VALUES (2, "Cats", 5, 2 );
+INSERT INTO inventory VALUES (3, "Cups", 12, 3 );
+INSERT INTO inventory VALUES (4, "Shoes", 9, 1 );
+INSERT INTO inventory VALUES (5, "Computer", 4, 2 );
+INSERT INTO inventory VALUES (6, "Heaters", 4, 3 );
+
+--display the database ordered by aisle
+SELECT * FROM inventory ORDER BY aisle;
+
+--inventory total quantity
+SELECT SUM(quantity) FROM inventory;
